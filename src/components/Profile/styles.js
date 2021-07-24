@@ -41,7 +41,7 @@ h2 {
 }
 p {
     font-family: ${(props) => props.theme.font};
-    font-size: 13px;
+    font-size: 14px;
 }
 
 `;

@@ -51,3 +51,13 @@ export const SearchProfile = styled.div`
 	background-color: #ffffff;
 	padding: 16px;
 `;
+
+export const ContainerReps = styled.div`
+	display: flex;
+	flex-direction: wow;
+	width: 100%;
+	height: 100vh;
+	flex-wrap: nowrap | wrap 
+	background-color: ${(props) => props.theme.colors.primary};	
+`;
+

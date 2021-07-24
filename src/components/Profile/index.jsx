@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { BodyProfile, Header, ImageProfile, InfoProfile, InfoSecondaryProfile, Wrapper } from './styles';
+import { convertDate } from '../../utils';
+import logo from '../../assets/logo.png'
 
 const Profile = (props) => {
     const { name, email, login, avatar_url, type, followers, following,
@@ -8,22 +10,22 @@ const Profile = (props) => {
     return (
         <Wrapper>
             <Header>
-                <ImageProfile src='https://avatars.githubusercontent.com/u/18586265?v=4' alt='Profile Picture' />
+                <ImageProfile src={avatar_url === 'Não informado' ? logo : avatar_url} alt='Profile Picture' />
                 <InfoProfile>
                     <h1>{login}</h1>
-                    <h2>{email}</h2>
+                    <h2>{email === null ? 'Não informado' : email}</h2>
                     <p>Tipo: {type}</p>
-                    <p>Localização: {location}</p>
+                    <p>Localização: {location === null ? 'Não informado' : location}</p>
                     <p>Seguidores: {followers}</p>
                     <p>Seguindo: {following}</p>
                 </InfoProfile>
             </Header>
             <BodyProfile>
                 <InfoSecondaryProfile>
-                    <p>Criado em: {created_at}</p>
-                    <p>Nome: {name}</p>
+                    <p>Criado em: {convertDate(created_at)}</p>
+                    <p>Nome: {name === null ? 'Não informado' : name}</p>
                     <p>Respositorios: {public_repos}</p>
-                    <p>Twitter: {twitter_username}</p>
+                    <p>Twitter: {twitter_username === null ? 'Não informado' : twitter_username}</p>
 
                 </InfoSecondaryProfile>
             </BodyProfile>
@@ -31,8 +33,18 @@ const Profile = (props) => {
     )
 }
 
-Profile.default = {
-
+Profile.defaultProps = {
+    name: 'Não informado',
+    email: 'Não informado',
+    login: 'Não informado',
+    avatar_url: 'Não informado',
+    type: 'Não informado',
+    followers: 'Não informado',
+    following: 'Não informado',
+    location: 'Não informado',
+    twitter_username: 'Não informado',
+    created_at: 'Não informado',
+    public_repos: 'Não informado'
 }
 
 Profile.propTypes = {
