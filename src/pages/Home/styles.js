@@ -52,12 +52,12 @@ export const SearchProfile = styled.div`
 	padding: 16px;
 `;
 
-export const ContainerReps = styled.div`
-	display: flex;
-	flex-direction: wow;
-	width: 100%;
-	height: 100vh;
-	flex-wrap: nowrap | wrap 
-	background-color: ${(props) => props.theme.colors.primary};	
+export const ContainerRepos = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+	flex-wrap: wrap ;
+	background-color: ${(props) => props.theme.colors.primary};
+
 `;
 
