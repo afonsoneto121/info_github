@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import { getProfile, getRepos } from '../../services'
 import { Container, ContainerProfile, Logo, LabelField, ContainerRepos, NavApp, Quote } from './styles'
 
+
 import { Button, CardRepos, InputField, Profile } from '../../components'
 
 const Home = props => {
@@ -18,6 +19,7 @@ const Home = props => {
     }
     find();
 
+
   }, [profile])
 
   const handlekeyPress = async (e) => {
@@ -27,6 +29,7 @@ const Home = props => {
         setTextFindRepo('Não encontrado')
       else
         setProfile(profileResult);
+
     }
   }
 
@@ -46,6 +49,7 @@ const Home = props => {
     <>
       <NavApp>
       <Logo src={logo} alt='Logo do Aplicativo' />
+
           <LabelField>
             <InputField placeholder='Pesquise'
               onChange={handeOnChangeInput}
@@ -78,6 +82,7 @@ const Home = props => {
       </Container>
 
     </>
+
   )
 }
 

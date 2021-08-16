@@ -19,6 +19,7 @@ export const Card = styled.div`
 
     border-left: 5px solid #676767;
   }
+
   h2 {
     font-family: ${(props) => props.theme.font};
     font-size: 14px;
@@ -34,5 +35,6 @@ export const Card = styled.div`
     font-weight: 700;
     line-height: 18px;
     color: #1976d2;
+
   }
 `;
