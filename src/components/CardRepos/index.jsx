@@ -10,7 +10,7 @@ const CardRepos = props => {
       <h2> {name} </h2>
       <p> Linguagem: {language} </p>
       <p> Última atualização: {convertDate(updated_at)} </p>
-      <a href={html_url}> link  </a>
+      <a href={html_url}> LINK  </a>
     </Card>
   )
 }
