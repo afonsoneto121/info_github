@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
+width: 375px;
 `;
 
 export const Header = styled.section`
@@ -13,10 +14,12 @@ height: 200px;
 `;
 
 export const ImageProfile = styled.img`
-width: 150px;
+width: 175px;
 height: 200px;
 border-radius: 50%;
 object-fit: cover;
+align-self: center;
+margin-bottom: 21px;
 `;
 
 export const InfoProfile = styled.div`

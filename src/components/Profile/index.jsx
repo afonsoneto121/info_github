@@ -2,15 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { BodyProfile, Header, ImageProfile, InfoProfile, InfoSecondaryProfile, Wrapper } from './styles';
 import { convertDate } from '../../utils';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/searching.gif'
 
 const Profile = (props) => {
     const { name, email, login, avatar_url, type, followers, following,
         location, twitter_username, created_at, public_repos } = props;
     return (
         <Wrapper>
+            <ImageProfile src={avatar_url === 'Não informado' ? logo : avatar_url} alt='Profile Picture' />
+
             <Header>
-                <ImageProfile src={avatar_url === 'Não informado' ? logo : avatar_url} alt='Profile Picture' />
                 <InfoProfile>
                     <h1>{login}</h1>
                     <h2>{email === null ? 'Não informado' : email}</h2>
